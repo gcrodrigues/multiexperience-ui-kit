@@ -56,13 +56,13 @@ export default function Select({
 		() =>
 			classNames(
 				{
-					'uk-select--error': error,
-					'uk-select--borderPrimary': !inputSearch,
-					'uk-select--alignRight':
+					'mx-select--error': error,
+					'mx-select--borderPrimary': !inputSearch,
+					'mx-select--alignRight':
 						(!placeholder && !inputValue) ||
 						(!placeholder && Array.isArray(defaultValue)),
 				},
-				'uk-select',
+				'mx-select',
 			),
 		[error, inputSearch, placeholder, defaultValue, inputValue],
 	)
@@ -71,9 +71,9 @@ export default function Select({
 		() =>
 			classNames(
 				{
-					'uk-select__header--marginBottom': label || helper,
+					'mx-select__header--marginBottom': label || helper,
 				},
-				'uk-select__header',
+				'mx-select__header',
 			),
 		[label, helper],
 	)
@@ -82,9 +82,9 @@ export default function Select({
 		() =>
 			classNames(
 				{
-					'uk-select__placeholder--disabled': disabled,
+					'mx-select__placeholder--disabled': disabled,
 				},
-				'uk-select__placeholder',
+				'mx-select__placeholder',
 			),
 		[disabled],
 	)
@@ -125,7 +125,7 @@ export default function Select({
 					<>
 						{multiple ? (
 							<SelectItem
-								className="uk-popover__select__item"
+								className="mx-popover__select__item"
 								value={renderedValue}
 							>
 								<SelectItemCheck />
@@ -133,7 +133,7 @@ export default function Select({
 							</SelectItem>
 						) : (
 							<SelectItem
-								className="uk-popover__select__item"
+								className="mx-popover__select__item"
 								value={renderedValue}
 							/>
 						)}
@@ -144,41 +144,30 @@ export default function Select({
 	)
 
 	return (
-		<div className="uk-container">
+		<div className="mx-container">
 			<div className={selectHeaderClassNames}>
 				{label && (
-					<SelectLabel className="uk-label" store={select}>
+					<SelectLabel className="mx-label" store={select}>
 						{label}
 					</SelectLabel>
 				)}
 
 				{helper && (
 					<Tooltip message={helper}>
-						<Info size={14} className="uk-header__info" />
+						<Info size={14} className="mx-header__info" />
 					</Tooltip>
 				)}
 			</div>
 
 			{!!inputValue.length && multiple && (
-				<div
-					style={{
-						display: 'flex',
-						flexWrap: 'wrap',
-						gap: '8px',
-						marginBottom: '8px',
-					}}
-				>
-					<button onClick={handleClearInputValue} className="uk-clear__button">
+				<div className="tags">
+					<button onClick={handleClearInputValue} className="mx-tags__button">
 						{clearInputButtonText}
 					</button>
 					{value &&
 						Array.isArray(value) &&
 						value.map(inpuValue => (
-							<Tag
-								hasButton
-								key={inpuValue}
-								onClick={() => handleClick(inpuValue)}
-							>
+							<Tag key={inpuValue} onClick={() => handleClick(inpuValue)}>
 								{inpuValue}
 							</Tag>
 						))}
@@ -198,15 +187,15 @@ export default function Select({
 			</SelectComponent>
 
 			{mounted && (
-				<SelectPopover store={select} className="uk-popover" composite={false}>
+				<SelectPopover store={select} className="mx-popover" composite={false}>
 					{inputSearch ? (
 						<>
-							<div className="uk-popover__combobox_wrapper">
-								<div className="uk-popover__combobox">
+							<div className="mx-popover__combobox_wrapper">
+								<div className="mx-popover__combobox">
 									<Combobox
 										store={combobox}
 										placeholder={comboboxPlaceholder}
-										className="uk-popover__combobox__input"
+										className="mx-popover__combobox__input"
 									/>
 									{rightIcon}
 								</div>
@@ -222,7 +211,7 @@ export default function Select({
 					)}
 				</SelectPopover>
 			)}
-			{error && <span className="uk-error">{error}</span>}
+			{error && <span className="mx-error">{error}</span>}
 		</div>
 	)
 }

@@ -19,20 +19,19 @@ export default function InputField(props: InputFieldProps) {
 		onFocus,
 	} = props
 	const [isVisible, setIsVisible] = useState(false)
-	const inputType =
-		type === 'password' ? (isVisible ? 'text' : 'password') : type
 
-	const toggleShowPassword = () => {
-		setIsVisible(!isVisible)
-	}
+	const inputType = useMemo(
+		() => (type === 'password' ? (isVisible ? 'text' : 'password') : type),
+		[isVisible, type],
+	)
 
 	const headerClassNames = useMemo(
 		() =>
 			classNames(
 				{
-					'uk-header--marginBottom': label || helper,
+					'mx-header--marginBottom': label || helper,
 				},
-				'uk-header',
+				'mx-header',
 			),
 		[label, helper],
 	)
@@ -41,41 +40,45 @@ export default function InputField(props: InputFieldProps) {
 		() =>
 			classNames(
 				{
-					'uk-input--disabled': disabled,
-					'uk-input--error': error,
+					'mx-input--disabled': disabled,
+					'mx-input--error': error,
 				},
-				'uk-input',
+				'mx-input',
 				className,
 			),
 		[disabled, error],
 	)
 
+	const toggleShowPassword = () => {
+		setIsVisible(!isVisible)
+	}
+
 	return (
-		<div className="uk-container">
+		<div className="mx-container">
 			<div className={headerClassNames}>
 				{label && (
-					<FormLabel className="uk-header__label" name={name}>
+					<FormLabel className="mx-header__label" name={name}>
 						{label}
 					</FormLabel>
 				)}
 				{helper && (
 					<Tooltip message={helper}>
-						<Info size={14} className="uk-header__info" />
+						<Info size={14} className="mx-header__info" />
 					</Tooltip>
 				)}
 			</div>
 			<div className={inputClassNames}>
-				{icon && <div className="uk-input__left__icon">{icon}</div>}
+				{icon && <div className="mx-input__left__icon">{icon}</div>}
 				<FormInput
 					{...props}
 					onFocus={onFocus}
 					type={inputType}
-					className="uk-input__field"
+					className="mx-input__field"
 					disabled={disabled}
 				/>
 				{type === 'password' && (
 					<button
-						className="uk-input__button"
+						className="mx-input__button"
 						onClick={toggleShowPassword}
 						disabled={disabled}
 					>
@@ -83,7 +86,7 @@ export default function InputField(props: InputFieldProps) {
 					</button>
 				)}
 			</div>
-			{error && <span className="uk-error">{error}</span>}
+			{error && <span className="mx-error">{error}</span>}
 		</div>
 	)
 }

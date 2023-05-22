@@ -11,7 +11,7 @@ export default function Button({
 	onClick,
 }: ButtonProps) {
 	const selectedVariant = useMemo(
-		() => (variant ? `uk-button--${variant}` : `uk-button--default `),
+		() => (variant ? `mx-button--${variant}` : `mx-button--default `),
 		[variant],
 	)
 
@@ -19,10 +19,10 @@ export default function Button({
 		() =>
 			classNames(
 				{
-					'uk-button--disabled': disabled,
+					'mx-button--disabled': disabled,
 				},
+				'mx-button',
 				selectedVariant,
-				'uk-button',
 				className,
 			),
 		[className, variant, disabled, selectedVariant],

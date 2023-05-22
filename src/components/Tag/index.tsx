@@ -2,7 +2,6 @@ import React from 'react'
 import './styles.css'
 import { TagProps } from './types'
 import { X } from 'react-feather'
-import classNames from 'classnames'
 
 export default function Tag({
 	children,
@@ -17,18 +16,14 @@ export default function Tag({
 		borderColor: `${borderColor && borderColor}`,
 	}
 
-	const tagClassNames = classNames({
-		'uk-tag': true,
-	})
-
 	return (
 		<button
 			style={color || borderColor ? style : undefined}
-			className={tagClassNames}
+			className="mx-tag"
 			onClick={onClick}
 		>
-			<p className="uk-tag__text">{children}</p>
-			<span className="uk-tag__button" onClick={onClick}>
+			<p className="mx-tag__text">{children}</p>
+			<span className="mx-tag__button" onClick={onClick}>
 				<X size={12} />
 			</span>
 		</button>

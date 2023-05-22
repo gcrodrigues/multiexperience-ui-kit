@@ -1,4 +1,4 @@
-.uk-button {
+.mx-button {
 	border: none;
 	border-radius: 4px;
 	cursor: pointer;
@@ -12,71 +12,71 @@
 	font-family: var(--font-roboto);
 }
 
-.uk-button--default {
+.mx-button--default {
 	background-color: transparent;
 }
 
-.uk-button--default:hover:not(.uk-button--disabled) {
+.mx-button--default:hover:not(.mx-button--disabled) {
 	background-color: var(--transparent-hover);
 }
 
-.uk-button--primary {
+.mx-button--primary {
 	background-color: var(--primary);
 	color: var(--body-text-light);
 }
 
-.uk-button--primary:hover:not(.uk-button--disabled) {
+.mx-button--primary:hover:not(.mx-button--disabled) {
 	background-color: var(--primary-hover);
 }
 
-.uk-button--secondary {
+.mx-button--secondary {
 	background-color: var(--secondary);
 	color: var(--body-text-dark);
 }
 
-.uk-button--secondary:hover:not(.uk-button--disabled) {
+.mx-button--secondary:hover:not(.mx-button--disabled) {
 	background-color: var(--secondary-hover);
 }
 
-.uk-button--success {
+.mx-button--success {
 	background-color: var(--success);
 	color: var(--body-text-light);
 }
 
-.uk-button--success:hover:not(.uk-button--disabled) {
+.mx-button--success:hover:not(.mx-button--disabled) {
 	background-color: var(--success-hover);
 }
 
-.uk-button--warning {
+.mx-button--warning {
 	background-color: var(--warning);
 	color: var(--body-text-light);
 }
 
-.uk-button--warning:hover:not(.uk-button--disabled) {
+.mx-button--warning:hover:not(.mx-button--disabled) {
 	background-color: var(--warning-hover);
 }
 
-.uk-button--info {
+.mx-button--info {
 	background-color: var(--info);
 	color: var(--body-text-light);
 }
 
-.uk-button--info:hover:not(.uk-button--disabled) {
+.mx-button--info:hover:not(.mx-button--disabled) {
 	background-color: var(--info-hover);
 }
 
-.uk-button--ghost {
+.mx-button--ghost {
 	background-color: transparent;
 	border: 1px solid var(--ghost-border);
 	color: var(--ghost-text);
 }
 
-.uk-button--ghost:hover:not(.uk-button--disabled) {
+.mx-button--ghost:hover:not(.mx-button--disabled) {
 	border-color: var(--ghost-border-hover);
 	color: var(--ghost-text-hover);
 }
 
-.uk-button--disabled {
+.mx-button--disabled {
 	opacity: 0.5;
 	cursor: default;
 }

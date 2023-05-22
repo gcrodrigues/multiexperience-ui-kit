@@ -17,10 +17,10 @@ export default function Tooltip({
 	const tooltip = useTooltipStore()
 	return (
 		<>
-			<TooltipAnchor className="uk-anchor" as={as} store={tooltip}>
+			<TooltipAnchor className="mx-anchor" as={as} store={tooltip}>
 				<div style={{ display: 'flex' }}>{children}</div>
 			</TooltipAnchor>
-			<TooltipComponent className="uk-tooltip" portal={portal} store={tooltip}>
+			<TooltipComponent className="mx-tooltip" portal={portal} store={tooltip}>
 				<TooltipArrow />
 				{message}
 			</TooltipComponent>

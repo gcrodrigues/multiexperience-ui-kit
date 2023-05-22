@@ -1,4 +1,4 @@
-.uk-tag {
+.mx-tag {
 	height: 20px;
 	display: flex;
 	align-items: center;
@@ -12,16 +12,12 @@
 	color: var(--body-text-dark);
 }
 
-.uk-tag--noButton {
-	cursor: default;
-}
-
-.uk-tag__text {
+.mx-tag__text {
 	margin: 0;
 	font-size: 14px;
 }
 
-.uk-tag__button {
+.mx-tag__button {
 	font-size: 0;
 	padding: 0;
 	border: none;

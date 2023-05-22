@@ -1,5 +1,5 @@
 .mx-container {
-	font-size: 16px;
+	font-size: 1rem;
 	position: relative;
 }
 
@@ -10,12 +10,12 @@
 }
 
 .mx-select__header--marginBottom {
-	margin-bottom: 4.8px;
+	margin-bottom: 0.25rem;
 }
 
 .mx-label {
 	font-family: var(--font-open-sans);
-	font-size: 14px;
+	font-size: 0.875rem;
 	font-family: var(--font-open-sans);
 }
 
@@ -26,8 +26,8 @@
 .tags {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 8px;
-	margin-bottom: 8px;
+	gap: 0.5rem;
+	margin-bottom: 0.5rem;
 }
 
 .mx-tags__button {
@@ -46,16 +46,16 @@
 }
 
 .mx-select {
-	min-width: 220px;
-	min-height: 40px;
+	min-width: 13.75rem;
+	min-height: 2.5rem;
 	width: 100%;
-	padding: 13px;
+	padding: 0.8rem;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	background-color: var(--input-background-color);
 	border: 1px solid var(--input-border);
-	border-radius: 0.25em;
+	border-radius: 4px;
 	font-family: var(--font-open-sans);
 	position: relative;
 	cursor: pointer;
@@ -82,7 +82,7 @@
 	color: var(--input-placeholder-color);
 	margin: -2.5px;
 	font-family: var(--font-open-sans);
-	font-size: 14px;
+	font-size: 0.875rem;
 }
 
 .mx-select__placeholder--disabled {
@@ -96,9 +96,9 @@
 	border-radius: 0.25em;
 	padding-bottom: 6px;
 	font-family: var(--font-open-sans);
-	font-size: 14px;
-	min-height: 40px;
-	max-height: 300px;
+	font-size: 0.875rem;
+	min-height: 2.5rem;
+	max-height: 18.75rem;
 	height: 100%;
 	overflow: auto;
 	position: relative;
@@ -109,9 +109,9 @@
 
 .mx-popover__combobox_wrapper {
 	position: sticky;
-	margin-bottom: 5px;
+	margin-bottom: 0.25rem;
 	top: 0;
-	padding: 16px;
+	padding: 1rem;
 	background-color: #faf8f8;
 	border-bottom: 1px solid var(--input-border);
 }
@@ -123,7 +123,7 @@
 	border-radius: 0.35em;
 	border: 1px solid var(--input-border);
 	padding: 0;
-	padding: 0px 12px;
+	padding: 0 0.75rem;
 	background-color: #fff;
 }
 
@@ -136,7 +136,7 @@
 }
 
 .mx-popover__combobox__input {
-	height: 40px;
+	height: 2.5rem;
 	width: 100%;
 	box-sizing: border-box;
 	border: none;
@@ -145,11 +145,11 @@
 }
 
 .mx-popover__select__item {
-	padding: 8px 12px;
-	border-radius: 0.25em;
+	padding: 0.5rem 0.75rem;
+	border-radius: 4px;
 	display: flex;
 	align-items: center;
-	gap: 12px;
+	gap: 0.75rem;
 }
 
 .mx-popover__select__item[data-active-item]:not(
@@ -160,8 +160,8 @@
 }
 
 .mx-error {
-	margin-top: 0.3em;
+	margin-top: 0.25rem;
 	color: var(--warning);
 	font-family: var(--font-open-sans);
-	font-size: 13px;
+	font-size: 0.8rem;
 }

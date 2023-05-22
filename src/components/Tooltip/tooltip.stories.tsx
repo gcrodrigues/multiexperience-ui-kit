@@ -12,10 +12,20 @@ const TooltipComponent = (args: TooltipProps) => {
 const meta: Meta<TooltipProps> = {
 	title: 'Tooltip',
 	component: TooltipComponent,
-}
+	argTypes: {
+		message: {
+			table: { type: { summary: 'string' } },
+			type: { name: 'string', required: true },
+		},
+		children: {
+			type: { name: 'string', required: true },
+			control: { type: 'object' },
+		},
+	},
+} satisfies Meta<TooltipProps>
 
 export default meta
-type Story = StoryObj<TooltipProps>
+type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
 	args: {

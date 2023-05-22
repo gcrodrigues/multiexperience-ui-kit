@@ -5,5 +5,4 @@ export interface TagProps extends PropsWithChildren {
 	color?: string
 	borderColor?: string
 	backgroundColor?: string
-	hasButton?: boolean
 }

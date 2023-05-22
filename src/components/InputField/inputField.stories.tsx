@@ -5,6 +5,7 @@ import InputField from '.'
 import { Form, useFormStore } from '@ariakit/react'
 import { InputFieldProps } from './types'
 import { User } from 'react-feather'
+import { argTypes } from './argTypes'
 
 const withForm = (
 	Story: React.ComponentType<InputFieldProps>,
@@ -23,14 +24,15 @@ const Input = (args: InputFieldProps) => {
 	return <InputField {...args} />
 }
 
-const meta: Meta<InputFieldProps> = {
+const meta = {
 	title: 'Input Field',
 	component: Input,
 	decorators: [withForm],
-}
+	argTypes,
+} satisfies Meta<typeof InputField>
 
 export default meta
-type Story = StoryObj<InputFieldProps>
+type Story = StoryObj<typeof meta>
 
 export const Password: Story = {
 	args: {
@@ -48,6 +50,7 @@ export const Error: Story = {
 		defaultValue: 'google.com',
 		required: true,
 		error: 'Digite um e-mail válido',
+		name: 'email',
 	},
 }
 

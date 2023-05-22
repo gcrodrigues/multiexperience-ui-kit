@@ -5,6 +5,7 @@ import { SelectProps } from './types'
 import Select from '.'
 import { Form, useFormStore } from '@ariakit/react'
 import { Search, Trash } from 'react-feather'
+import { argTypes } from './argTypes'
 
 const withForm = (
 	Story: React.ComponentType<SelectProps>,
@@ -69,10 +70,11 @@ const meta: Meta<SelectProps> = {
 	title: 'Select',
 	component: SelectComponent,
 	decorators: [withForm],
-}
+	argTypes,
+} satisfies Meta<SelectProps>
 
 export default meta
-type Story = StoryObj<SelectProps>
+type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
 	args: {
@@ -82,9 +84,12 @@ export const Default: Story = {
 		label: 'Select your favorite fruit',
 		placeholder: 'Placeholder',
 	},
+	parameters: {
+		docs: { story: { inline: false, height: '400px' } },
+	},
 }
 
-export const Helper: Story = {
+export const Multiple: Story = {
 	args: {
 		items: fruits,
 		matchKeys: ['value'],
@@ -92,43 +97,25 @@ export const Helper: Story = {
 		placeholder: 'Select an option',
 		label: 'Select your favorite fruit',
 		helper: 'Eat fruits!',
-	},
-}
-
-export const Multiple: Story = {
-	args: {
-		items: roles,
-		clearInputButtonText: <Trash size={12} />,
 		multiple: true,
-		matchKeys: ['value'],
-		renderValue: 'value',
-		label: 'Roles',
 	},
-}
-
-export const Combobox: Story = {
-	args: {
-		items: roles,
-		multiple: true,
-		inputSearch: true,
-		matchKeys: ['value'],
-		renderValue: 'value',
-		rightIcon: <Search />,
-		placeholder: 'Select user roles',
-		comboboxPlaceholder: 'Find fruit',
+	parameters: {
+		docs: { story: { inline: false, height: '400px' } },
 	},
 }
 
 export const Error: Story = {
 	args: {
 		items: roles,
-		multiple: true,
 		inputSearch: true,
 		matchKeys: ['value'],
 		renderValue: 'value',
 		rightIcon: <Search />,
 		placeholder: 'Select user roles',
 		error: 'Select at least one fruit',
+	},
+	parameters: {
+		docs: { story: { inline: false, height: '400px' } },
 	},
 }
 
@@ -142,25 +129,5 @@ export const Disabled: Story = {
 		rightIcon: <Search />,
 		placeholder: 'Select user roles',
 		disabled: true,
-	},
-}
-
-export const ControlledSelectInput: Story = {
-	args: {
-		items: [
-			{ id: '11', value: 'Admin' },
-			{ id: '12', value: 'Secretary' },
-			{ id: '13', value: 'Teacher' },
-			{ id: '14', value: 'Parent' },
-			{ id: '15', value: 'Principal' },
-			{ id: '16', value: 'Student' },
-			{ id: '17', value: 'Employee' },
-		],
-		multiple: true,
-		inputSearch: true,
-		matchKeys: ['value'],
-		renderValue: 'value',
-		rightIcon: <Search />,
-		placeholder: 'Look DevTools Console',
 	},
 }

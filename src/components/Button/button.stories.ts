@@ -1,27 +1,29 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
+import { argTypes } from './argTypes'
 import Button from '../Button'
-import { ButtonVariants } from './types'
+import { ButtonProps, OVariants } from './types'
 
-const meta: Meta<typeof Button> = {
+const meta: Meta<ButtonProps> = {
 	title: 'Button',
 	component: Button,
-}
+	argTypes,
+} satisfies Meta<ButtonProps>
 
 export default meta
-type Story = StoryObj<typeof Button>
+type Story = StoryObj<typeof meta>
 
 export const Variants: Story = {
 	args: {
 		children: 'Choose the variation below',
-		variant: ButtonVariants.Default,
+		variant: OVariants.Default,
 	},
 }
 
 export const Disabled: Story = {
 	args: {
 		children: 'Button disabled',
-		variant: ButtonVariants.Primary,
+		variant: OVariants.Primary,
 		disabled: true,
 	},
 }

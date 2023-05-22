@@ -5,10 +5,10 @@ import Tag from '.'
 const meta: Meta<TagProps> = {
 	title: 'Tag',
 	component: Tag,
-}
+} satisfies Meta<TagProps>
 
 export default meta
-type Story = StoryObj<TagProps>
+type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
 	args: {

@@ -1,32 +1,31 @@
 import React, { useMemo } from 'react'
 import './styles.css'
 import classNames from 'classnames'
-import { ButtonProps, ButtonVariants } from './types'
+import { ButtonProps, OVariants } from './types'
 
 export default function Button({
 	children,
 	className,
 	disabled,
-	variant = ButtonVariants['Default'],
+	variant = OVariants.Default,
 	onClick,
 }: ButtonProps) {
+	const selectedVariant = useMemo(
+		() => (variant ? `uk-button--${variant}` : `uk-button--default `),
+		[variant],
+	)
+
 	const buttonClassName = useMemo(
 		() =>
 			classNames(
 				{
-					'uk-button--primary': variant === ButtonVariants['Primary'],
-					'uk-button--secondary': variant === ButtonVariants['Secondary'],
-					'uk-button--success': variant === ButtonVariants['Success'],
-					'uk-button--warning': variant === ButtonVariants['Warning'],
-					'uk-button--info': variant === ButtonVariants['Info'],
-					'uk-button--ghost': variant === ButtonVariants['Ghost'],
-					'uk-button--default': variant === ButtonVariants['Default'],
 					'uk-button--disabled': disabled,
 				},
+				selectedVariant,
 				'uk-button',
 				className,
 			),
-		[className, variant, disabled],
+		[className, variant, disabled, selectedVariant],
 	)
 
 	return (

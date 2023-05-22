@@ -7,7 +7,7 @@ export interface SelectProps {
 	defaultValue?: string | string[]
 	disabled?: boolean
 	error?: string
-	helper: string
+	helper?: string
 	inputSearch?: boolean
 	items: any[]
 	label?: string

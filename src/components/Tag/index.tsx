@@ -10,7 +10,6 @@ export default function Tag({
 	color,
 	borderColor,
 	backgroundColor,
-	hasButton,
 }: TagProps) {
 	const style = {
 		color: `${color && color}`,
@@ -20,7 +19,6 @@ export default function Tag({
 
 	const tagClassNames = classNames({
 		'uk-tag': true,
-		'uk-tag--noButton': !hasButton,
 	})
 
 	return (
@@ -30,11 +28,9 @@ export default function Tag({
 			onClick={onClick}
 		>
 			<p className="uk-tag__text">{children}</p>
-			{hasButton && (
-				<span className="uk-tag__button" onClick={onClick}>
-					<X size={12} />
-				</span>
-			)}
+			<span className="uk-tag__button" onClick={onClick}>
+				<X size={12} />
+			</span>
 		</button>
 	)
 }

@@ -75,7 +75,7 @@
 	border: 1px solid var(--primary);
 }
 
-.uk-input:focus-within:not(.uk-input--error) > .uk-input__left__icon {
+/* .uk-input:focus-within:not(.uk-input--error) > .uk-input__left__icon {
 	color: var(--primary);
 }
 
@@ -85,7 +85,7 @@
 
 .uk-input--error .uk-input__left__icon {
 	color: var(--warning);
-}
+} */
 
 .uk-input__field {
 	font-size: 14px;

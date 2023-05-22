@@ -10,7 +10,7 @@ const TooltipComponent = (args: TooltipProps) => {
 }
 
 const meta: Meta<TooltipProps> = {
-	title: 'Tooltip',
+	title: 'Components/Tooltip',
 	component: TooltipComponent,
 	argTypes: {
 		message: {

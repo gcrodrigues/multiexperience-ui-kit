@@ -67,7 +67,7 @@ const roles = [
 ]
 
 const meta: Meta<SelectProps> = {
-	title: 'Select',
+	title: 'Components/Select',
 	component: SelectComponent,
 	decorators: [withForm],
 	argTypes,

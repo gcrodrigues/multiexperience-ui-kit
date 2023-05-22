@@ -3,7 +3,7 @@ import { TagProps } from './types'
 import Tag from '.'
 
 const meta: Meta<TagProps> = {
-	title: 'Tag',
+	title: 'Components/Tag',
 	component: Tag,
 } satisfies Meta<TagProps>
 
@@ -19,8 +19,7 @@ export const Default: Story = {
 export const WithButton: Story = {
 	args: {
 		children: 'Front-end',
-		hasButton: true,
-		color: '#fff200',
+		color: 'rgb(255, 242, 0)',
 		backgroundColor: 'rgba(154, 0, 0, 0.412)',
 		borderColor: 'rgb(255, 0, 0)',
 	},

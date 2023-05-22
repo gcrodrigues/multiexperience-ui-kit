@@ -5,7 +5,7 @@ import Button from '../Button'
 import { ButtonProps, OVariants } from './types'
 
 const meta: Meta<ButtonProps> = {
-	title: 'Button',
+	title: 'Components/Button',
 	component: Button,
 	argTypes,
 } satisfies Meta<ButtonProps>

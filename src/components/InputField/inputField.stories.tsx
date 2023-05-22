@@ -25,7 +25,7 @@ const Input = (args: InputFieldProps) => {
 }
 
 const meta = {
-	title: 'Input Field',
+	title: 'Components/Input',
 	component: Input,
 	decorators: [withForm],
 	argTypes,

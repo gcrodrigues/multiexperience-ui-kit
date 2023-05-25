@@ -4,7 +4,6 @@ import { ButtonProps } from './types'
 export const argTypes: Partial<ArgTypes<ButtonProps>> = {
 	variant: {
 		description: 'Choose a variant to select predefined button colors',
-		type: { name: 'string' },
 	},
 	disabled: {
 		type: { name: 'boolean' },

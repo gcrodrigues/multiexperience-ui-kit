@@ -5,6 +5,17 @@ import Tag from '.'
 const meta: Meta<TagProps> = {
 	title: 'Components/Tag',
 	component: Tag,
+	argTypes: {
+		color: {
+			control: { type: 'color' },
+		},
+		backgroundColor: {
+			control: { type: 'color' },
+		},
+		borderColor: {
+			control: { type: 'color' },
+		},
+	},
 } satisfies Meta<TagProps>
 
 export default meta
@@ -16,7 +27,7 @@ export const Default: Story = {
 	},
 }
 
-export const WithButton: Story = {
+export const CustomColors: Story = {
 	args: {
 		children: 'Front-end',
 		color: 'rgb(255, 242, 0)',

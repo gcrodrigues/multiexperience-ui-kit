@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+@import './dark.css';
+@import './light.css';
+
+:root {
+	--font-open-sans: 'Open Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	--font-roboto: 'Roboto', Helvetica, system-ui, -apple-system,
+		BlinkMacSystemFont, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+}

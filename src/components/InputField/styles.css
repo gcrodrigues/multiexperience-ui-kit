@@ -17,17 +17,18 @@
 .mx-header__label {
 	font-family: var(--font-open-sans);
 	font-size: 0.875rem;
+	color: var(--input-label);
 }
 
 .mx-header__info {
-	color: var(--body-text-dark);
+	color: var(--input-icons);
 	align-self: center;
 }
 
 .mx-input {
 	display: flex;
 	align-items: stretch;
-	background-color: var(--input-background-color);
+	background-color: var(--input-background);
 	border: 1px solid var(--input-border);
 	border-radius: 4px;
 	height: 2.5rem;
@@ -35,15 +36,17 @@
 }
 
 .mx-input--error {
-	border-color: var(--warning);
+	border-color: var(--danger-500);
 }
 
 .mx-input:focus-within:not(.mx-input--error) {
-	border: 1px solid var(--primary);
+	border: 1px solid var(--primary-500);
 }
 
 .mx-input--disabled {
+	background-color: var(--input-background-disabled);
 	border-color: var(--input-border-disabled);
+	color: var(--input-text-disabled);
 }
 
 .mx-input__left__icon {
@@ -51,12 +54,12 @@
 	align-items: center;
 	justify-content: center;
 	padding-left: 0.75rem;
-	color: var(--input-placeholder-color);
+	color: var(--input-placeholder);
 }
 
 .mx-input__field {
 	font-size: 14px;
-	color: var(--body-text-dark);
+	color: var(--input-text);
 	background-color: transparent;
 	padding: 1rem 0.75rem;
 	border-radius: 4px;
@@ -74,18 +77,18 @@
 }
 
 .mx-input__field::placeholder {
-	color: var(--input-placeholder-color);
+	color: var(--input-placeholder);
 	opacity: 1;
 	font-family: var(--font-open-sans);
 }
 
 .mx-input--disabled .mx-input__field::placeholder {
-	color: var(--input-placeholder-disabled-color);
+	color: var(--input-placeholder-disabled);
 }
 
 .mx-input__field:-ms-input-placeholder,
 .mx-input__field::-ms-input-placeholder {
-	color: var(--input-placeholder-color);
+	color: var(--input-placeholder);
 	font-family: var(--font-open-sans);
 }
 
@@ -96,12 +99,12 @@
 	background-color: transparent;
 	border: none;
 	font-size: 0;
-	color: var(--input-icon);
+	color: var(--input-placeholder);
 }
 
 .mx-error {
 	margin-top: 0.25rem;
-	color: var(--warning);
+	color: var(--danger-500);
 	font-family: var(--font-open-sans);
 	font-size: 0.8rem;
 }

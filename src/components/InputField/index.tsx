@@ -16,6 +16,7 @@ export default function InputField(props: InputFieldProps) {
 		name,
 		type,
 		helper,
+		value,
 		onFocus,
 	} = props
 	const [isVisible, setIsVisible] = useState(false)
@@ -48,6 +49,10 @@ export default function InputField(props: InputFieldProps) {
 			),
 		[disabled, error],
 	)
+	const inputLeftIconClassNames = useMemo(
+		() => classNames('mx-input__left__icon', className),
+		[disabled],
+	)
 
 	const toggleShowPassword = () => {
 		setIsVisible(!isVisible)
@@ -68,13 +73,14 @@ export default function InputField(props: InputFieldProps) {
 				)}
 			</div>
 			<div className={inputClassNames}>
-				{icon && <div className="mx-input__left__icon">{icon}</div>}
+				{icon && <div className={inputLeftIconClassNames}>{icon}</div>}
 				<FormInput
 					{...props}
 					onFocus={onFocus}
 					type={inputType}
 					className="mx-input__field"
 					disabled={disabled}
+					value={value}
 				/>
 				{type === 'password' && (
 					<button

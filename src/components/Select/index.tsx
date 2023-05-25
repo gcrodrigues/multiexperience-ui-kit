@@ -127,12 +127,14 @@ export default function Select({
 							<SelectItem
 								className="mx-popover__select__item"
 								value={renderedValue}
+								autoFocus={false}
 							>
 								<SelectItemCheck />
 								{renderedValue}
 							</SelectItem>
 						) : (
 							<SelectItem
+								autoFocus={false}
 								className="mx-popover__select__item"
 								value={renderedValue}
 							/>

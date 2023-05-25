@@ -16,11 +16,11 @@
 .mx-label {
 	font-family: var(--font-open-sans);
 	font-size: 0.875rem;
-	font-family: var(--font-open-sans);
+	color: var(--input-label);
 }
 
 .mx-header__info {
-	color: var(--body-text-dark);
+	color: var(--input-icons);
 }
 
 .tags {
@@ -31,10 +31,11 @@
 }
 
 .mx-tags__button {
+	color: var(--input-text);
 	background-color: transparent;
 	border: none;
 	cursor: pointer;
-	border: 1px solid var(--body-text-dark);
+	border: 1px solid var(--input-border);
 	border-radius: 4px;
 	display: flex;
 	align-items: center;
@@ -42,7 +43,7 @@
 }
 
 .mx-tags__button:hover {
-	background-color: var(--transparent-hover);
+	background-color: var(--transparent-100);
 }
 
 .mx-select {
@@ -53,45 +54,56 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	background-color: var(--input-background-color);
+	background-color: var(--input-background);
 	border: 1px solid var(--input-border);
 	border-radius: 4px;
 	font-family: var(--font-open-sans);
 	position: relative;
 	cursor: pointer;
+	color: var(--input-text);
 }
 
 .mx-select[aria-disabled='true'] {
 	border-color: var(--input-border-disabled);
+	background-color: var(--input-background-disabled);
 	cursor: default;
 }
 
 .mx-select--error {
-	border-color: var(--warning);
+	border-color: var(--danger-500);
 }
 
 .mx-select--borderPrimary:focus-within:not(.mx-select--error) .mx-select {
-	border-color: var(--primary);
+	border-color: var(--primary-500);
 }
 
 .mx-select--alignRight {
 	justify-content: flex-end;
 }
 
+.mx-select svg {
+	color: var(--input-placeholder);
+}
+
 .mx-select__placeholder {
-	color: var(--input-placeholder-color);
+	color: var(--input-placeholder);
 	margin: -2.5px;
 	font-family: var(--font-open-sans);
 	font-size: 0.875rem;
 }
 
 .mx-select__placeholder--disabled {
-	color: var(--input-placeholder-disabled-color);
+	color: var(--input-placeholder-disabled);
+}
+
+.mx-select[aria-disabled='true'] svg {
+	color: var(--input-placeholder-disabled);
 }
 
 .mx-popover {
-	z-index: 50;
-	background-color: var(--input-background-color);
+	z-index: 1;
+	color: var(--input-text);
+	background-color: var(--input-background);
 	border: 1px solid var(--input-border);
 	border-radius: 0.25em;
 	padding-bottom: 6px;
@@ -112,7 +124,7 @@
 	margin-bottom: 0.25rem;
 	top: 0;
 	padding: 1rem;
-	background-color: #faf8f8;
+	background-color: var(--input-combobox-backkground);
 	border-bottom: 1px solid var(--input-border);
 }
 
@@ -124,18 +136,19 @@
 	border: 1px solid var(--input-border);
 	padding: 0;
 	padding: 0 0.75rem;
-	background-color: #fff;
+	background-color: var(--input-background);
 }
 
 .mx-popover__combobox:focus-within {
-	border: 1px solid var(--primary);
+	border: 1px solid var(--primary-500);
 }
 
 .mx-popover__combobox svg {
-	color: var(--input-icon);
+	color: var(--input-placeholder);
 }
 
 .mx-popover__combobox__input {
+	color: var(--input-text);
 	height: 2.5rem;
 	width: 100%;
 	box-sizing: border-box;
@@ -156,12 +169,12 @@
 		.mx-popover__select__item-active
 	) {
 	background-color: rgb(15, 144, 230);
-	color: var(--body-text-light);
+	color: var(--text-light);
 }
 
 .mx-error {
 	margin-top: 0.25rem;
-	color: var(--warning);
+	color: var(--danger-500);
 	font-family: var(--font-open-sans);
 	font-size: 0.8rem;
 }

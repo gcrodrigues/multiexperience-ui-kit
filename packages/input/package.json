@@ -1,0 +1,32 @@
+{
+  "name": "@mx-ui/input",
+  "version": "1.0.0",
+  "description": "Multiexperience UI Kit Input",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/index.d.ts",
+	"type": "module",
+  "scripts": {
+		"packages:clear": "rimraf dist",
+  	"packages:build": "yarn packages:clear && rollup --config ./rollup.config.mjs",
+		"prepare": "yarn run build"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+		"@ariakit/react": "*",
+		"@mx-ui/tooltip": "*",
+		"classnames": "^2.3.2",
+		"react-feather": "^2.0.10"
+  },
+  "devDependencies": {
+    "rimraf": "^5.0.1"
+  },
+  "homepage": "https://github.com/multiexperience/mx-ui/tree/main/packages/input",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/multiexperience/mx-ui"
+  }
+}

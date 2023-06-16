@@ -1,0 +1,34 @@
+{
+  "name": "@mx-ui/select",
+  "version": "1.0.0",
+  "description": "Multiexperience UI Kit Select",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/index.d.ts",
+	"type": "module",
+
+  "scripts": {
+		"packages:clear": "rimraf dist",
+ 	 	"packages:build": "yarn packages:clear && rollup --config ./rollup.config.mjs",
+		"prepare": "yarn run build"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@ariakit/react": "^0.1.2",
+    "@mx-ui/tag": "*",
+    "@mx-ui/tooltip": "*",
+		"classnames": "^2.3.2",
+		"match-sorter": "^6.3.1"
+  },
+	"devDependencies": {
+    "rimraf": "^5.0.1"
+  },
+  "homepage": "https://github.com/multiexperience/mx-ui/tree/main/packages/select",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/multiexperience/mx-ui"
+  }
+}

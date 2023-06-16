@@ -1,0 +1,62 @@
+:root.dark {
+	--primary-400: #3fa5ff;
+	--primary-500: #007bff;
+	--primary-600: #005fdb;
+
+	--basic-400: #e3e3e3;
+	--basic-500: #c7c7c7;
+	--basic-600: #a2a2a2;
+
+	--success-400: #52c13c;
+	--success-500: #36a52b;
+	--success-600: #3d7f12;
+
+	--warning-400: #fcba3f;
+	--warning-500: #d8972e;
+	--warning-600: #b5761f;
+
+	--danger-400: #ff4c3f;
+	--danger-500: #db2e30;
+	--danger-600: #b71f2e;
+
+	--info-400: #0fb7ff;
+	--info-500: #0a8edb;
+	--info-600: #076bb7;
+
+	--ghost-500: #b6babf;
+	--ghost-600: #f8f9fa;
+
+	--transparent-100: rgba(255, 255, 255, 0.08);
+	--transparent-200: rgba(255, 255, 255, 0.16);
+	--transparent-300: rgba(255, 255, 255, 0.24);
+	--transparent-400: rgba(255, 255, 255, 0.32);
+	--transparent-500: rgba(255, 255, 255, 0.4);
+	--transparent-600: rgba(255, 255, 255, 0.48);
+
+	--background-100: #393b41;
+	--background-200: #313339;
+	--background-300: #282b30;
+	--background-400: #1e2124;
+
+	--input-label: #b6bac2;
+	--input-background: rgba(57, 59, 65, 0.702);
+	--input-combobox-backkground: #424549;
+	--input-border: #26282e;
+	--input-placeholder: #6c6d76;
+	--input-icons: #b6bac2;
+	--input-text: #dbdddf;
+
+	--input-placeholder-disabled: #4f5059;
+	--input-border-disabled: #2c3037;
+	--input-background-disabled: #34363c;
+	--input-text-disabled: #c1c1c1;
+
+	--tooltip-box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px,
+		rgba(0, 0, 0, 0.06) 0px 1px 2px 0px;
+
+	--text-dark: #333333;
+	--text-light: #dbdddf;
+
+	--text-secondary: #6c757d;
+	--text: #dbdddf;
+}

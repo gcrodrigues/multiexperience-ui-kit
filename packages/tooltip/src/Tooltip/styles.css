@@ -1,0 +1,14 @@
+.mx-anchor {
+	display: inline-block;
+}
+
+.mx-tooltip {
+	padding: 1rem;
+	border-radius: 4px;
+	background-color: var(--background-100);
+	font-family: var(--font-open-sans);
+	font-size: 0.75rem;
+	box-shadow: var(--tooltip-box-shadow);
+	color: var(--text);
+	z-index: 2;
+}

@@ -1,12 +1,23 @@
 {
-  "name": "ui-kit",
-  "version": "1.0.0",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
+  "version": "0.0.0",
+  "workspaces": [
+    "packages/*"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/multiexperience/mx-ui.git"
+  },
   "license": "MIT",
+  "private": true,
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "devDependencies": {
     "@ariakit/react": "^0.1.2",
+    "@babel/plugin-transform-runtime": "^7.21.4",
+    "@rollup/plugin-alias": "^6.0.3",
+    "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^24.1.0",
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@rollup/plugin-terser": "^0.4.1",
@@ -22,13 +33,15 @@
     "@typescript-eslint/eslint-plugin": "^5.59.2",
     "@typescript-eslint/parser": "^5.59.2",
     "autoprefixer": "^10.4.14",
-    "classnames": "^2.3.2",
+    "chalk": "^4.1.2",
+    "commander": "^10.0.1",
     "eslint": "^8.40.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-storybook": "^0.6.12",
     "git-commit-msg-linter": "^5.0.4",
+    "lerna": "^6.6.2",
     "postcss": "^8.4.22",
     "prettier": "2.8.8",
     "prop-types": "^15.8.1",
@@ -42,16 +55,9 @@
     "tslib": "^2.5.0",
     "typescript": "^5.0.4"
   },
-  "peerDependencies": {
-    "react": "^18.2.0"
-  },
   "scripts": {
-    "build": "rm -rf dist && rollup -c",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
-  },
-  "dependencies": {
-    "match-sorter": "^6.3.1",
-    "react-feather": "^2.0.10"
+    "build-storybook": "storybook build",
+    "link:all": "npx lerna exec -- yarn link"
   }
 }

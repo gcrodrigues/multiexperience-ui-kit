@@ -1,8 +1,8 @@
 import React from "react";
 import type { Preview } from "@storybook/react";
-import MultiexperienceProvider from '../packages/multiexperience-provider/MultiexperienceContext'
-import '../packages/palette/styles.css'
+import { ThemeProvider } from '../packages/core'
 import './styles.css'
+import '../packages/core/src/styles/global'
 
 
 const withProvider = (
@@ -10,9 +10,9 @@ const withProvider = (
 	context: { args: any },
 ) => {
 	return (
-		<MultiexperienceProvider>
+		<ThemeProvider>
 			<Story {...context.args} />
-		</MultiexperienceProvider>
+		</ThemeProvider>
 	)
 }
 

@@ -5,21 +5,21 @@
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/index.d.ts",
-	"type": "module",
+  "type": "module",
   "scripts": {
-		"packages:clear": "rimraf dist",
-  	"build": "yarn packages:clear && rollup --config ./rollup.config.mjs",
-		"prepare": "yarn run build"
+    "packages:clear": "rimraf dist",
+    "build": "yarn packages:clear && rollup --config ./rollup.config.mjs",
+    "prepare": "yarn run build"
   },
   "license": "MIT",
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-		"@ariakit/react": "*",
-		"@multiexperience/tooltip": "*",
-		"classnames": "^2.3.2",
-		"react-feather": "^2.0.10"
+    "@ariakit/react": "*",
+    "@multiexperience/tooltip": "^1.0.0",
+    "classnames": "^2.3.2",
+    "react-feather": "^2.0.10"
   },
   "devDependencies": {
     "rimraf": "^5.0.1"

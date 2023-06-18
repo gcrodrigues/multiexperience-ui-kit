@@ -5,12 +5,11 @@
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/index.d.ts",
-	"type": "module",
-
+  "type": "module",
   "scripts": {
-		"packages:clear": "rimraf dist",
- 	 	"build": "yarn packages:clear && rollup --config ./rollup.config.mjs",
-		"prepare": "yarn run build"
+    "packages:clear": "rimraf dist",
+    "build": "yarn packages:clear && rollup --config ./rollup.config.mjs",
+    "prepare": "yarn run build"
   },
   "license": "MIT",
   "publishConfig": {
@@ -18,12 +17,12 @@
   },
   "dependencies": {
     "@ariakit/react": "^0.1.2",
-    "@multiexperience/tag": "*",
-    "@multiexperience/tooltip": "*",
-		"classnames": "^2.3.2",
-		"match-sorter": "^6.3.1"
+    "@multiexperience/tag": "^1.0.0",
+    "@multiexperience/tooltip": "^1.0.0",
+    "classnames": "^2.3.2",
+    "match-sorter": "^6.3.1"
   },
-	"devDependencies": {
+  "devDependencies": {
     "rimraf": "^5.0.1"
   },
   "homepage": "https://github.com/multiexperience/mx-ui/tree/main/packages/select",

@@ -1,5 +1,5 @@
 {
-  "name": "@mx-ui/button",
+  "name": "@multiexperience/button",
   "version": "1.0.0",
   "description": "Multiexperience UI Kit Button",
   "main": "./dist/cjs/index.js",

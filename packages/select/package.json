@@ -1,5 +1,5 @@
 {
-  "name": "@mx-ui/select",
+  "name": "@multiexperience/select",
   "version": "1.0.0",
   "description": "Multiexperience UI Kit Select",
   "main": "./dist/cjs/index.js",
@@ -18,8 +18,8 @@
   },
   "dependencies": {
     "@ariakit/react": "^0.1.2",
-    "@mx-ui/tag": "*",
-    "@mx-ui/tooltip": "*",
+    "@multiexperience/tag": "*",
+    "@multiexperience/tooltip": "*",
 		"classnames": "^2.3.2",
 		"match-sorter": "^6.3.1"
   },

@@ -3,7 +3,7 @@ import { FormInput, FormLabel } from '@ariakit/react'
 import { InputFieldProps } from '../types'
 import { Info, Eye, EyeOff } from 'react-feather'
 import './styles.css'
-import { Tooltip } from '@mx-ui/tooltip'
+import { Tooltip } from '@multiexperience/tooltip'
 import classNames from 'classnames'
 
 export default function InputField(props: InputFieldProps) {

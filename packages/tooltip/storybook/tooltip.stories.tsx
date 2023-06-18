@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 
 import Tooltip from '../src/Tooltip'
 import { TooltipProps } from '../src/types'
-import { Button } from '@mx-ui/button'
+import { Button } from '../../button/src'
 
 const TooltipComponent = (args: TooltipProps) => {
 	return <Tooltip {...args}>{args.children}</Tooltip>

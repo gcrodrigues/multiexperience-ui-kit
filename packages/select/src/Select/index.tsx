@@ -17,8 +17,8 @@ import { matchSorter } from 'match-sorter'
 import { Info } from 'react-feather'
 import { SelectProps } from '../types'
 import './styles.css'
-import { Tag } from '@mx-ui/tag'
-import { Tooltip } from '@mx-ui/tooltip'
+import { Tag } from '@multiexperience/tag'
+import { Tooltip } from '@multiexperience/tooltip'
 
 export default function Select({
 	clearInputButtonText = 'Clear',

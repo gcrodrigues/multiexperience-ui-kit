@@ -1,5 +1,5 @@
 {
-  "name": "@mx-ui/tag",
+  "name": "@multiexperience/tag",
   "version": "1.0.0",
   "description": "Multiexperience UI Kit Tag",
   "main": "./dist/cjs/index.js",

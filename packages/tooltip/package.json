@@ -1,5 +1,5 @@
 {
-  "name": "@mx-ui/tooltip",
+  "name": "@multiexperience/tooltip",
   "version": "1.0.0",
   "description": "Multiexperience UI Kit Tooltip",
   "main": "./dist/cjs/index.js",
@@ -16,6 +16,7 @@
     "access": "public"
   },
   "dependencies": {
+		"@multiexperience/button": "*",
     "@ariakit/react": "^0.1.2"
   },
 	"devDependencies": {

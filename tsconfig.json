@@ -16,7 +16,7 @@
 		"composite": true,
 		"baseUrl": ".",
 		"paths": {
-			"@mx-ui/*": ["packages/*/src"]
+			"@multiexperience/*": ["packages/*/src"]
 		}
   },
 	"include": ["packages", "shared", "typings"],

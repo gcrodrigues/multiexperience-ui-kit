@@ -8,7 +8,7 @@
 	"type": "module",
   "scripts": {
 		"packages:clear": "rimraf dist",
-  	"packages:build": "yarn packages:clear && rollup --config ./rollup.config.mjs",
+  	"build": "yarn packages:clear && rollup --config ./rollup.config.mjs",
     "prepare": "yarn run build"
   },
   "license": "MIT",
